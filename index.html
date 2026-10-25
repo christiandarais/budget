@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Darais Budget</title>
+<meta name="description" content="A private household budgeting tool used by one family.">
+<style>
+  :root { color-scheme: light dark; --ink: #313131; --muted: #969696; --page: #fff; --rule: #e6e6e6; }
+  @media (prefers-color-scheme: dark) { :root { --ink: #ececec; --muted: #8a8a8a; --page: #111; --rule: #262626; } }
+  body { margin: 0; background: var(--page); color: var(--ink); font: 400 15px/1.55 "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: -0.2px; }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 20px 80px; }
+  h1 { font-size: 34px; font-weight: 400; letter-spacing: -0.5px; margin: 0 0 8px; }
+  h2 { font-size: 15px; font-weight: 400; color: var(--muted); margin: 40px 0 8px; }
+  p, li { margin: 0 0 10px; }
+  ul { padding-left: 18px; }
+  .lede { color: var(--muted); }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 13px; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Darais Budget</h1>
+  <p class="lede">A private budgeting tool for one household. It is not a public service and has no sign-ups.</p>
+
+  <h2>What it is</h2>
+  <p>Darais Budget is a personal envelope budget built and used by the Darais family to plan spending, track bills and savings goals, and see where money goes each month. It runs on the family's own computer.</p>
+
+  <h2>How it uses bank data</h2>
+  <ul>
+    <li>Account balances and transactions are retrieved through Plaid, with read-only access the account holders grant themselves.</li>
+    <li>The data is used only to categorize spending and show the household's own budget. It is never sold, shared for advertising, or used for credit decisions.</li>
+    <li>Nobody outside the household can sign up or see the data.</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <ul>
+    <li><strong>Where data is stored:</strong> on the household's own computer, which uses full-disk encryption, with encrypted backups in the household's own iCloud account.</li>
+    <li><strong>Who processes it:</strong> Plaid, to connect the accounts. Transaction descriptions, amounts and dates (never account numbers or credentials) are sent to Anthropic's Claude API to suggest categories.</li>
+    <li><strong>Security:</strong> data in transit uses TLS. The app is not on the public internet: it can only be opened from the household's own computer and devices.</li>
+    <li><strong>Removing access:</strong> account holders can disconnect any bank at any time in the app or through Plaid, and the data stays on their own computer.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Christian Darais · <a href="mailto:cdarais@gmail.com">cdarais@gmail.com</a></p>
+
+  <footer>Last updated October 2026.</footer>
+</main>
+</body>
+</html>
